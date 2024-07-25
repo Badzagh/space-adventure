@@ -1,3 +1,15 @@
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-extra-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
 .App {
   color: white;
   background: linear-gradient(to bottom left, #0D1E48, #304571);
@@ -15,14 +27,14 @@
   }
 }
 
-.App-header {
+.header {
   background-color: black;
   height: 80px;
   width: 100%;
   font-size: calc(10px + 2vmin);
   color: white;
 
-  .container{
+  &__container{
   
     height: 100%;
     display: flex;
@@ -32,9 +44,37 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    column-gap: 60px;
+  }
+
+  &__shop-icon {
+    position: absolute;
+    left: 0;
+  
+    &:hover {
+      opacity: 0;
+      transition: 0.5s ease;
+    }
+  }
+
+  &__open-menu-icon {
+    display: none;
+  }
+
+  &__menu-checkbox {
+    display: none;
+  }
+
+  &__menu {
+    display: none;
+  }
 }
 
-.App-link {
+.link {
   color: white;
   text-decoration: none;
   font-size: 18px;
@@ -45,41 +85,11 @@
     background: linear-gradient(to bottom right, #EBFF00, #FF70D9);
     -webkit-background-clip: text;
     background-clip: text;
-    transition: background 0.3s ease;
+    transition: 0.5s ease;
   }
 }
 
-#shop-icon {
-  position: absolute;
-  left: 0;
-
-  &:hover {
-    opacity: 0;
-  }
-}
-
-header {
-  nav {
-    display: flex;
-    flex-direction: row;
-    column-gap: 60px;
-  }
-
-  label {
-    display: none;
-  }
-
-  ul {
-    display: none;
-  }
-}
-
-/* These two lines make the checkbox and the label disappear when we are in desktop mode. */
-input {
-  display: none;
-}
-
-#banner-section {
+.banner-section {
    background-image: url('../public/icons/banner-image.svg'), url('../public/icons/banner-image.svg');
    background-position: left,right;
    background-size: cover, cover;
@@ -88,11 +98,12 @@ input {
    /* padding-top: 91px; */
    /* padding-bottom: 61.5px; */
    
-  img {
+  &__image {
     height: 367px;
+    animation: levitate 3s ease-in-out infinite;
   }
 
-  .container {
+  &__container {
     height: 490px;
     display: flex;
     flex-direction: row;
@@ -100,24 +111,24 @@ input {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-
-    div {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      row-gap: 22px;
-      align-items: start;
-    }
   }
 
-  h1 {
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
+    align-items: start;
+  }
+
+  &__title {
     font-size: 72px;
 
     span {
       color: #FF70D9;
     }
   }
-  h5 {
+  &__sub-title {
     font-size: 32px;
 
     span {
@@ -125,7 +136,7 @@ input {
     }
   }
 
-  button {
+  &__button {
     background-color: #EBFF00;
     padding-left: 40px;
     padding-right: 40px;
@@ -137,6 +148,19 @@ input {
 
     &:hover {
       opacity: 60%;
+      transition: 0.5s ease;
+    }
+  }
+
+  @keyframes levitate {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
 }
@@ -150,28 +174,14 @@ input {
 }
 
 
-#offers-section {
+.offers-section {
   margin-top: 60px;
 
-  h1 {
-    font-size: 72px;
-
-    span {
-      color: #FF70D9;
-    }
-  }
-
-  h2 {
+  &__title {
     font-size: 32px;
   }
-  h5 {
-    font-size: 32px;
-    span {
-      color: #EBFF00;
-    }
-  }
-
-  button {
+  
+  &__button {
     background-color: transparent;
     border: 2px solid #EBFF00;
     color: #EBFF00;
@@ -185,15 +195,48 @@ input {
 
     &:hover {
       opacity: 60%;
+      transition: 0.5s ease;
     }
   }
-}
 
-.offers-container {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: max-content;
-  gap: 40px;
+  &__offers-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: max-content;
+    gap: 40px;
+  }
+
+  &__first-offer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
+    align-items: start;
+  }
+
+  &__second-offer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
+    align-items: start;
+  }
+
+  &__third-offer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
+    align-items: start;
+  } 
+
+  &__four-offer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
+    align-items: start;
+  }
 }
 
 #first-offer-container {
@@ -205,14 +248,13 @@ input {
    background-blend-mode: normal;
    padding: 35px;
    height: 280px;
-}
 
-.first-offer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 22px;
-  align-items: start;
+   h1 {
+    font-size: 72px;
+  }
+  h5 {
+    font-size: 32px;
+  }
 }
 
 #second-offer-container {
@@ -233,14 +275,6 @@ input {
   }
 }
 
-.second-offer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 22px;
-  align-items: start;
-}
-
 #third-offer-container {
   background-image: url('../public/icons/offers-banner-2.svg'), url('../public/icons/offers-banner-2.svg');
    background-position: left,right;
@@ -258,14 +292,6 @@ input {
   }
 }
 
-.third-offer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 22px;
-  align-items: start;
-} 
-
 #four-offer-container {
   grid-column: span 2 / span 2;
   background-image: url('../public/icons/offers-banner-3.svg'), url('../public/icons/offers-banner-3.svg');
@@ -275,21 +301,20 @@ input {
    background-blend-mode: normal;
    padding: 35px;
    height: 280px;
+
+   h1 {
+    font-size: 72px;
+  }
+  h5 {
+    font-size: 32px;
+  }
 }
 
-.four-offer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 22px;
-  align-items: start;
-}
-
-#space-journey-section {
+.space-journey-section {
   
   font-size: 32px;
 
-  .container {
+  &__container {
     padding-top: 62px;
     padding-bottom: 62px;
     display: flex;
@@ -297,30 +322,31 @@ input {
     row-gap: 34px;
   }
 
-  h2 {
+  &__title {
     font-size: 32px;
   }
 
-  p {
+  &__description {
     font-size: 20px;
     opacity: 60%;
   }
 
-  a {
+  &__link {
     font-size: 20px;
     color: #EBFF00;
     text-decoration: none;
 
     &:hover {
       opacity: 60%;
+      transition: 0.5s ease;
     }
   }
 }
 
-footer {
+.footer {
   background-color: black;
 
-  .container {
+  &__container {
     height: 127px;
     
      display: flex;
@@ -329,11 +355,11 @@ footer {
      align-items: center;
   }
 
-  img {
+  &__img {
     width: 51.85px;
   }
 
-  p {
+  &__title {
     color: #EBFF00;
     font-size: 18px;
   }
@@ -345,29 +371,38 @@ footer {
     padding-left: 29.5px;
     padding-right: 29.5px;
   }
-  #banner-section {
-    h1 {
+  .banner-section {
+    &__title {
       font-size: 48px;
       width: max-content;
     }
-    h5 {
+
+    &__sub-title {
       font-size: 22px;
     }
-    img {
+
+    &__image {
       position: relative;
       right: -100px;
     }
   } 
-  .offers-container {
-    grid-template-columns: auto auto;
-    justify-items: center;
-    gap: 30px;
+  .offers-section {
+    &__offers-container {
+      grid-template-columns: auto auto;
+      justify-items: center;
+      gap: 30px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
   }
   #first-offer-container {
     grid-column: span 1 / span 1;
     max-width: 269px;
     display: flex;
     align-items: flex-end;
+    width: 100%;
 
     h1 {
       font-size: 40px;
@@ -383,6 +418,8 @@ footer {
     max-width: 269px;
     display: flex;
     align-items: flex-end;
+    width: 100%;
+
     h1 {
       font-size: 40px;
     }
@@ -397,6 +434,8 @@ footer {
     max-width: 269px;
     display: flex;
     align-items: flex-end;
+    width: 100%;
+
     h1 {
       font-size: 40px;
     }
@@ -412,6 +451,8 @@ footer {
     max-width: 269px;
     display: flex;
     align-items: flex-end;
+    width: 100%;
+
     h1 {
       font-size: 40px;
     }
@@ -425,19 +466,21 @@ footer {
 }
 
 @media (width <= 665px) {
-  #company-logo {
-    height: 24px;
+  .header {
+    &__company-logo {
+      height: 24px;
+    }
   }
-  .App-header {
+  .header {
     position: relative;
     z-index: 1;
     height: 48px;
 
-    nav{
+    &__nav{
       display: none;
     }
 
-    ul {
+    &__menu {
       position: fixed;
       background-color: #754267;
       width: 40%;    ;
@@ -448,6 +491,8 @@ footer {
       display: flex;
       flex-direction: column;
       row-gap: 20px;
+      transform: translateX(100%);
+      transition: transform 1s ease-out;
 
       div{
         display: flex;
@@ -455,47 +500,88 @@ footer {
         row-gap: 16px;
       }
     }
+
+    &__open-menu-icon {
+      display: block;
+      cursor: pointer;
+    }
+
+    &__close-menu-icon {
+      margin-left: auto;
+      cursor: pointer;
+    }
+
+    @keyframes open {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes close {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(100%);
+        display: none;
+      }
+    }
   }
-  header label {
-    display: block;
-    margin-left: auto;
+  
+  input[type="checkbox"]:checked ~ .header__menu {
+    transform: translateX(0);
   }
-  input[type="checkbox"]:not(:checked) + ul {
-    display: none;
+
+  input[type="checkbox"]:not(:checked) ~ .header__menu {
+    transform: translateX(100%);
   }
+
   .container {
     padding-left: 20px;
     padding-right: 20px;
   }
-  #banner-section {
+
+  .banner-section {
     h1 {
       font-size: 36px;
       width: max-content;
     }
+
     h5 {
       font-size: 16px;
     }
-    img {
+    
+    &__image {
       position: relative;
       right: 0;
       height: 336px;
     }
-    .container {
+
+    &__container {
       flex-direction: column-reverse;
       height: 407px;
       padding-bottom: 44px;
+    }
 
-      div {
-        align-items: center;
-        text-align: center;
-        row-gap: 17px;
-      }
+    &__content {
+      align-items: center;
+      text-align: center;
+      row-gap: 17px;
     }
   } 
-  .offers-container {
-    grid-template-columns: auto;
-    justify-items: center;
-    gap: 30px;
+  .offers-section {
+    &__offers-container {
+      grid-template-columns: auto;
+      justify-items: center;
+      gap: 30px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
   }
   #first-offer-container {
     grid-column: span 1 / span 1;
