@@ -1,0 +1,121 @@
+.header {
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  
+    &__container{
+    
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      column-gap: 60px;
+    }
+  
+    &__shop-icon {
+      position: absolute;
+      left: 0;
+    
+      &:hover {
+        opacity: 0;
+        transition: 0.5s ease;
+      }
+    }
+  
+    &__open-menu-icon {
+      display: none;
+    }
+  
+    &__menu-checkbox {
+      display: none;
+    }
+  
+    &__menu {
+      display: none;
+    }
+}
+
+@media (width <= 725px) {
+    .header {
+      &__company-logo {
+        height: 24px;
+      }
+    }
+    .header {
+      position: relative;
+      z-index: 1;
+      height: 48px;
+  
+      &__nav{
+        display: none;
+      }
+  
+      &__menu {
+        position: fixed;
+        background-color: #754267;
+        width: 40%;    ;
+        height: 100%;
+        top: 0;
+        right: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        transform: translateX(100%);
+        transition: transform 1s ease-out;
+  
+        div{
+          display: flex;
+          flex-direction: column;
+          row-gap: 16px;
+        }
+      }
+  
+      &__open-menu-icon {
+        display: block;
+        cursor: pointer;
+      }
+  
+      &__close-menu-icon {
+        margin-left: auto;
+        cursor: pointer;
+      }
+  
+      @keyframes open {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+  
+      @keyframes close {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(100%);
+          display: none;
+        }
+      }
+    }
+    
+    input[type="checkbox"]:checked ~ .header__menu {
+      transform: translateX(0);
+    }
+  
+    input[type="checkbox"]:not(:checked) ~ .header__menu {
+      transform: translateX(100%);
+    }
+}

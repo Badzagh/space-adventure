@@ -1,0 +1,291 @@
+.offers-section {
+    margin-top: 60px;
+  
+    &__title {
+      font-size: 32px;
+    }
+    
+    &__button {
+      background-color: transparent;
+      border: 2px solid #EBFF00;
+      color: #EBFF00;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      border-radius: 100px;
+      font-size: 22px;
+      cursor: pointer;
+  
+      &:hover {
+        opacity: 60%;
+        transition: 0.5s ease;
+      }
+    }
+  
+    &__offers-container {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: max-content;
+      gap: 40px;
+    }
+  
+    &__first-offer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 22px;
+      align-items: start;
+    }
+  
+    &__second-offer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 22px;
+      align-items: start;
+    }
+  
+    &__third-offer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 22px;
+      align-items: start;
+    } 
+  
+    &__four-offer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 22px;
+      align-items: start;
+    }
+  }
+  
+  #first-offer-container {
+    grid-column: span 2 / span 2;
+    background-image: url('../../../public/icons/offers-banner-0.svg'), url('../../../public/icons/offers-banner-0.svg');
+     background-position: left,right;
+     background-size: cover, cover;
+     background-repeat: no-repeat, no-repeat;
+     background-blend-mode: normal;
+     padding: 35px;
+     height: 280px;
+  
+     h1 {
+      font-size: 72px;
+    }
+    h5 {
+      font-size: 32px;
+    }
+  }
+  
+  #second-offer-container {
+    background-image: url('../../../public/icons/offers-banner-1.svg'), url('../../../public/icons/offers-banner-1.svg');
+     background-position: left,right;
+     background-size: cover, cover;
+     background-repeat: no-repeat, no-repeat;
+     background-blend-mode: normal;
+     padding: 35px;
+     height: 280px;
+  
+     h1 {
+      font-size: 46px;
+    }
+  
+    h5 {
+      font-size: 24px;
+    }
+  }
+  
+  #third-offer-container {
+    background-image: url('../../../public/icons/offers-banner-2.svg'), url('../../../public/icons/offers-banner-2.svg');
+     background-position: left,right;
+     background-size: cover, cover;
+     background-repeat: no-repeat, no-repeat;
+     background-blend-mode: normal;
+     padding: 35px;
+     height: 280px;
+  
+     h1 {
+      font-size: 46px;
+    }
+    h5 {
+      font-size: 24px;
+    }
+  }
+  
+  #four-offer-container {
+    grid-column: span 2 / span 2;
+    background-image: url('../../../public/icons/offers-banner-3.svg'), url('../../../public/icons/offers-banner-3.svg');
+     background-position: left,right;
+     background-size: cover, auto;
+     background-repeat: no-repeat, no-repeat;
+     background-blend-mode: normal;
+     padding: 35px;
+     height: 280px;
+  
+     h1 {
+      font-size: 72px;
+    }
+    h5 {
+      font-size: 32px;
+    }
+  }
+
+  @media (width <= 1080px) {
+    .offers-section {
+      &__offers-container {
+        grid-template-columns: auto auto;
+        justify-items: center;
+        gap: 30px;
+      }
+  
+      &__title {
+        font-size: 24px;
+      }
+    }
+    #first-offer-container {
+      grid-column: span 1 / span 1;
+      max-width: 269px;
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+  
+      h1 {
+        font-size: 40px;
+      }
+      h5 {
+        font-size: 16px;
+      }
+      button {
+        font-size: 16px;
+      }
+    }
+    #second-offer-container {
+      max-width: 269px;
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+  
+      h1 {
+        font-size: 40px;
+      }
+      h5 {
+        font-size: 16px;
+      }
+      button {
+        font-size: 16px;
+      }
+    } 
+    #third-offer-container {
+      max-width: 269px;
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+  
+      h1 {
+        font-size: 40px;
+      }
+      h5 {
+        font-size: 16px;
+      }
+      button {
+        font-size: 16px;
+      }
+    }
+    #four-offer-container {
+      grid-column: span 1 / span 1;
+      max-width: 269px;
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+  
+      h1 {
+        font-size: 40px;
+      }
+      h5 {
+        font-size: 16px;
+      }
+      button {
+        font-size: 16px;
+      }
+    } 
+}
+  
+@media (width <= 725px) {
+    .offers-section {
+      &__offers-container {
+        grid-template-columns: auto;
+        justify-items: center;
+        gap: 30px;
+      }
+  
+      &__title {
+        font-size: 18px;
+      }
+    }
+    #first-offer-container {
+      grid-column: span 1 / span 1;
+      max-width: 250px;
+      display: flex;
+      align-items: flex-end;
+  
+      h1 {
+        font-size: 40px;
+      }
+      h5 {
+        font-size: 16px;
+      }
+      button {
+        font-size: 16px;
+      }
+    }
+    #second-offer-container {
+      max-width: 250px;
+      display: flex;
+      align-items: flex-end;
+  
+      h1 {
+        font-size: 40px;
+      }
+      h5 {
+        font-size: 16px;
+      }
+      button {
+        font-size: 16px;
+      }
+    }
+    #third-offer-container {
+      max-width: 250px;
+      display: flex;
+      align-items: flex-end;
+  
+      h1 {
+        font-size: 40px;
+      }
+      h5 {
+        font-size: 16px;
+      }
+      button {
+        font-size: 16px;
+      }
+    }
+    #four-offer-container {
+      grid-column: span 1 / span 1;
+      max-width: 250px;
+      display: flex;
+      align-items: flex-end;
+  
+      h1 {
+        font-size: 40px;
+      }
+      h5 {
+        font-size: 16px;
+      }
+      button {
+        font-size: 16px;
+      }
+    }
+}

@@ -1,0 +1,21 @@
+.footer {
+    background-color: black;
+  
+    &__container {
+      height: 127px;
+      
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+  
+    &__img {
+      width: 51.85px;
+    }
+  
+    &__title {
+      color: #EBFF00;
+      font-size: 18px;
+    }
+}
