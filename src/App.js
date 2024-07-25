@@ -10,7 +10,7 @@ function App() {
           <nav className="header__nav">
             <a
               className="link"
-              href="https://reactjs.org"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -18,7 +18,7 @@ function App() {
             </a>
             <a
               className="link"
-              href="https://reactjs.org"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -26,7 +26,7 @@ function App() {
             </a>
             <a
               className="link"
-              href="https://reactjs.org"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -64,7 +64,7 @@ function App() {
               </h5>
               <a
                 className="link banner-section__link"
-                href="https://reactjs.org"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -91,7 +91,7 @@ function App() {
                   </h5>
                   <a
                     className="link"
-                    href="https://reactjs.org"
+                    href=""
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -111,7 +111,7 @@ function App() {
                   </h5>
                   <a
                     className="link"
-                    href="https://reactjs.org"
+                    href=""
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -131,7 +131,7 @@ function App() {
                   </h5>
                   <a
                     className="link"
-                    href="https://reactjs.org"
+                    href=""
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -150,7 +150,7 @@ function App() {
                   </h5>
                   <a
                     className="link"
-                    href="https://reactjs.org"
+                    href=""
                     target="_blank"
                     rel="noopener noreferrer"
                   >
